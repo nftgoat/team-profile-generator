@@ -3,7 +3,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const generateHTML = require('./src/generateHTML');
 
-// creates a small array of questions for user
+// creates an array of questions for user
 
 const questions = [
     {
