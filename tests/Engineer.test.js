@@ -1,9 +1,13 @@
-// Brings in the employee class from classes file in lib.
+// this brings in the employee class
+
 const Engineer = require('../lib/engineer.classes');
 
-// Begins testing.
+// this begins the test
+
 describe('Engineer', () => {
-    // Test getRole method.
+
+    // this tests the getRole method
+
     describe('getRole', () => {
     it('should return employee role', () => {
             const role = 'Engineer'
@@ -11,7 +15,9 @@ describe('Engineer', () => {
             const newRole = new Engineer().getRole();
             expect(role).toEqual(newRole);
     });
-    // Test getGithub method.
+
+    // this tests the getGithub method
+
     describe('getGithub', () => {
         it('should return employee GitHub', () => {
                 const github = 'nftgoat';

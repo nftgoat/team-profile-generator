@@ -1,9 +1,10 @@
-// Determine required modules, including custom local modules
+// the required modules
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateHTML = require('./src/generateHTML');
 
-// Create Questions for user
+// creates a small array of questions for user
+
 const questions = [
     {
         type: 'input',
@@ -11,18 +12,23 @@ const questions = [
         name: 'employeeId',
     },
 ];
-// Create write to file function
+
+// this is the write to file function
+
 function writeToFile(src) {
     fs.writeFile('./dist/index.html', src, (err) =>
         err ? console.error(err) : console.log('HTML file saved as index.html in src folder')
     )
 }
-// Create initialization function
+
+// the initialization function
+
 function init() {
     inquirer
         .prompt(questions)
         .then((responses) => writeToFile(generateHTML(responses)));
 }
 
-// Call init
+// calls the initialization function
+
 init();

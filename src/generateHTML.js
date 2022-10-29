@@ -9,6 +9,7 @@ function generateHTML(data) {
     <title>Document</title>
 </head>
 <body>
+// include template literal to make it append to the webpage
     <h1>${data.employeeId}</h1>
 </body>
 </html>
